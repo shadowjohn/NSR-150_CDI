@@ -9,8 +9,11 @@
 Author：羽山 (https://3wa.tw)<br>
 Author：@FB 田峻墉
 </h2>
-
-<h2>接腳</h2>
+<h2>版本：</h2>
+V0.01
+<br>
+<br>
+<h2>接腳：</h2>
 <ul>
   <li>D1：脈衝 PWM 輸入</li>
   <li>D6：點火 輸出</li>
@@ -26,7 +29,8 @@ Author：@FB 田峻墉
 <img src="screenshot/NSR_CDI_hand.png">
 <br>
 <h2>免責聲明：</h2>
-不要學，你們的車一定會壞掉，哈哈
+不要學，你們的車一定會壞掉，哈哈<br>
+文章、電路圖與程式皆採滾動式修正
 <br>
 <br>
 <h2>詳細心得參考：</h2>
