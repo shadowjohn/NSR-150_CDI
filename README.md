@@ -34,7 +34,7 @@ V0.01
 接線圖
 <br>
 <br>
-<img src="screenshot/NSR_CDI_hand.png">
+<img src="screenshot/NSR_CDI_hand_V01.png">
 <br>
 <h2>免責聲明：</h2>
 不要學，你們的車一定會壞掉，哈哈<br>
