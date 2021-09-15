@@ -24,11 +24,11 @@ const int FirePin = D6;  //點火
 //0~14000
 volatile float now_degree = 12;
 volatile const float degree[16] = {8, 12, 12, 12, 17, 29, 29, 25, 23, 20, 17, 13, 10, 8, 8, 8};
-volatile const float fullAdv = 55;
+volatile const float fullAdv = 60;
 volatile int fireTimes = 0;
-#define CLK D7
-#define DIO D8
-TM1637 tm1637(CLK, DIO);
+//#define CLK D7
+//#define DIO D8
+//TM1637 tm1637(CLK, DIO);
 volatile unsigned long C = micros(); //紀錄碰到凸台的時間
 volatile unsigned long C_old = 0; //紀錄上次碰到凸台的時間
 volatile unsigned long rpm = 0; //紀錄當前 RPM
@@ -60,11 +60,13 @@ void ICACHE_RAM_ATTR countup() {  //For newest version
   if(rpm>17000)
   {
     //不可能的
+    //rpm = 0;
     return;
   }
   if(rpm<80)
   {
     //太低了，熄火吧
+    //rpm = 0;
     return;
   }
   if (rpm != 0)
@@ -104,10 +106,10 @@ void setup() {
   pinMode(FirePin, OUTPUT);  
   //註冊凸台中斷
   attachInterrupt(digitalPinToInterrupt(ToPin), countup, RISING); //RISING
-  tm1637.init();
-  tm1637.set(BRIGHT_TYPICAL); //BRIGHT_TYPICAL = 2,BRIGHT_DARKEST = 0,BRIGHTEST = 7;
+  //tm1637.init();
+  //tm1637.set(BRIGHT_TYPICAL); //BRIGHT_TYPICAL = 2,BRIGHT_DARKEST = 0,BRIGHTEST = 7;
   //playFirstTime();
-  diaplayOnLed(0);
+  //diaplayOnLed(0);
   digitalWrite(FirePin, LOW);
 }
 
@@ -127,16 +129,17 @@ void loop() {
     if(micros()-C_old>=500000)
     {
       //低於 100 轉以下
-      diaplayOnLed(0);
+      //diaplayOnLed(0);
     }
     else
     {
-      diaplayOnLed(rpm);
+      //diaplayOnLed(rpm);
     }
   }
-  isShowCount++;    
+  isShowCount++;  
+   
 }
-void playFirstTime()
+/*void playFirstTime()
 {
   // 0000~9999 跑二次
   for (int i = 0; i <= 9; i++)
@@ -148,7 +151,8 @@ void playFirstTime()
     delay(100);
   }
 }
-void display_rpm() {
+*/
+/*void display_rpm() {
   if (rpm > 30000) return;
   //if(duty>=500000) return;
   Serial.print("rpm: ");
@@ -195,3 +199,4 @@ String lpad(String temp , byte L , String theword) {
     temp = theword + temp;
   return temp;
 }
+*/

@@ -13,13 +13,13 @@ Author：羽山 (https://3wa.tw)<br>
 Author：@FB 田峻墉
 </h2>
 <h2>版本：</h2>
-V0.01 
+V0.2
 <br>
 <h2>最初發布時間：</h2>
 2021-09-09
 <br>
 <h2>最後更新時間：</h2>
-2021-09-09
+2021-09-16
 <br>
 <h2>接腳：</h2>
 <ul>
@@ -29,7 +29,7 @@ V0.01
   <li>D8：TM1637 DIO</li>
 </ul>
 
-<img src="screenshot/NSR_CDI.png">
+<img src="screenshot/NSR_CDI_V0.2.png">
 <br>
 接線圖
 <br>
