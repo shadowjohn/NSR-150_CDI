@@ -23,9 +23,15 @@ const int ToPin = D1;  //凸台
 const int FirePin = D6;  //點火
 //0~14000
 volatile float now_degree = 12;
-volatile const float degree[16] = {8, 12, 12, 12, 17, 29, 29, 25, 23, 20, 17, 13, 10, 8, 8, 8};
-volatile const float fullAdv = 60;
-volatile int fireTimes = 0;
+
+//NSR維修手冊裡的圖
+//volatile const float degree[16] = {12, 12, 12, 12, 17, 29, 29, 25, 23, 20, 17, 13, 10, 8, 8, 8};
+
+//這個是羽山原本CDI量到的
+volatile const float degree[16] = {10, 12, 12, 25, 26, 23, 20, 16, 13, 9, 9, 9, 8, 8, 8, 8};
+volatile const float fullAdv = 65;
+volatile bool isFiring = false;
+
 //#define CLK D7
 //#define DIO D8
 //TM1637 tm1637(CLK, DIO);
@@ -35,7 +41,7 @@ volatile unsigned long rpm = 0; //紀錄當前 RPM
 volatile unsigned long RPM_DELAY = 0; //凸台跟上一次凸台相距時間，用來推算當前RPM多少
 volatile unsigned int isShowCount = 0; //在 loop 中每轉 100次才回報一次到 Serial 觀看
 
-volatile double CDI_DELAY = 0; //計算每一圈碰到凸台後，要延遲多久時間才點火 us
+volatile double CDI_DELAY = -1; //計算每一圈碰到凸台後，要延遲多久時間才點火 us
 void ICACHE_RAM_ATTR countup() {  //For newest version
   //收到CDI點火，扣掉偵測到凸台RISING時間
   //只要是Rising就是Fire
@@ -87,12 +93,14 @@ void ICACHE_RAM_ATTR countup() {  //For newest version
     //rpm 一圈時間 * r * 360)
     //計算每一圈碰到凸台後，要延遲多久時間才點火 us
     CDI_DELAY = (1000000.0 / (float(rpm) / 60.0)) * ((fullAdv - r)/ 360.0);
-    delayMicroseconds(long(CDI_DELAY));
-    digitalWrite(FirePin, HIGH);
+    isFiring = true;
+    //改成在 loop 裡執行
+    //delayMicroseconds(long(CDI_DELAY));
+    //digitalWrite(FirePin, HIGH);
     //點火持續時間
     //固定點 200us    
-    delayMicroseconds(200);
-    digitalWrite(FirePin, LOW);
+    //delayMicroseconds(200);
+    //digitalWrite(FirePin, LOW);
   }
 }
 
@@ -137,6 +145,17 @@ void loop() {
     }
   }
   isShowCount++;  
+  
+  if(isFiring == true)
+  {
+    isFiring = false;
+    delayMicroseconds(long(CDI_DELAY));
+    digitalWrite(FirePin, HIGH);
+    //點火持續時間
+    //固定點 200us    
+    delayMicroseconds(200);
+    digitalWrite(FirePin, LOW);
+  }
    
 }
 /*void playFirstTime()
