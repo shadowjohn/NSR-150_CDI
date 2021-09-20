@@ -7,7 +7,7 @@
  */
 #include <Arduino.h>
 //數位模組
-#include <TM1637.h>
+//#include <TM1637.h>
 /*
 轉速   60 轉 =  每分鐘    60 轉，每秒  1    轉，1轉 = 1          秒 = 1000.000 ms = 1000000us
 轉速   100 轉 = 每分鐘   100 轉，每秒  1.67 轉，1轉 = 0.598802   秒 =  598.802 ms =  598802us
@@ -25,10 +25,12 @@ const int FirePin = D6;  //點火
 volatile float now_degree = 12;
 
 //NSR維修手冊裡的圖
-//volatile const float degree[16] = {12, 12, 12, 12, 17, 29, 29, 25, 23, 20, 17, 13, 10, 8, 8, 8};
+//                                    0 1000 2000 3000 4000 5000 6000 7000 8000 9000 10000 11000 12000 13000 14000 15000
+//volatile const float degree[16] = {12, 12,  12,  12,  17,  29,  29,  25,  23,  20,   17,   13,   10,   8,    8,    8  };
 
 //這個是羽山原本CDI量到的
-volatile const float degree[16] = {10, 12, 12, 25, 26, 23, 20, 16, 13, 9, 9, 9, 8, 8, 8, 8};
+//                                    0 1000 2000 3000 4000 5000 6000 7000 8000 9000 10000 11000 12000 13000 14000 15000
+volatile const float degree[16] =   {10, 12,  12,  25,  26,  23,  20,  16,  13,   9,   9,    9,    8,    8,    8,    8  };
 volatile const float fullAdv = 65;
 volatile bool isFiring = false;
 
