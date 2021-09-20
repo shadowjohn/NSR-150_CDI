@@ -19,7 +19,7 @@ V0.2
 2021-09-09
 <br>
 <h2>最後更新時間：</h2>
-2021-09-16
+2021-09-20
 <br>
 <h2>接腳：</h2>
 <ul>
@@ -29,12 +29,12 @@ V0.2
   <li>D8：TM1637 DIO</li>
 </ul>
 
-<img src="screenshot/NSR_CDI_V0.2.png">
+<img src="screenshot/NSR_CDI_V0.3.png">
 <br>
 接線圖
 <br>
 <br>
-<img src="screenshot/NSR_CDI_hand_V01.png">
+<img src="screenshot/NSR_CDI_hand_V03.png">
 <br>
 <h2>免責聲明：</h2>
 不要學，你們的車一定會壞掉，哈哈<br>
