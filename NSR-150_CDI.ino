@@ -1,7 +1,7 @@
 /*
  * NSR-150 可程式 CDI
- * Version: V0.01
- * Release Date: 2021-09-08
+ * Version: V0.2
+ * Release Date: 2021-09-19
  * Author: 羽山秋人 (https://3wa.tw)
  * Author: @FB 田峻墉
  */
