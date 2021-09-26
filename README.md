@@ -54,4 +54,5 @@ V0.4：RC訊號從 D4 輸出，讓二期 RC 電腦變成一期 RC 電腦的騎�
   <li>2. NSR150 自製可程式 CDI - Part1 (序) https://3wa.tw/blog/blog.php?id=1924</li>
   <li>3. NSR150 自製可程式 CDI - Part2 (研究方法目錄) https://3wa.tw/blog/blog.php?id=1926</li>
   <li>4. NSR150 自製可程式 CDI - Part3 (實作練習) https://3wa.tw/blog/blog.php?id=1930</li>
+  <li>5. NSR150 自製可程式 CDI - Part4 (實作練習) https://3wa.tw/blog/blog.php?id=1931</li>
 </ul>  
