@@ -28,13 +28,59 @@ V0.4
   <li>D7：TM1637 CLK</li>
   <li>D8：TM1637 DIO</li>
 </ul>
-
+<br>
 <img src="screenshot/NSR_CDI_V0.3.png">
 <br>
-接線圖
+(V0.3 版接線圖)
 <br>
 <br>
 <img src="screenshot/NSR_CDI_hand_V03.png">
+<br>
+(V0.3 版成品圖)
+<br>
+<br>
+<img src="screenshot/NSR_CDI_V0.4.png">
+<br>
+(V0.4 版接線圖)
+<br>
+<br>
+<img src="screenshot/NSR_CDI_hand_V04.png">
+<br>
+(V0.3 版成品圖)
+<br>
+<br>
+<h2>各位本說明：</h2>
+<table>
+  <thead>
+  <tr>
+    <th>版本</th>
+    <th>補充說明</td>
+    <th>適用程式</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>0.1~0.3</td>
+    <td>基本版</td>
+    <td>      
+      (各版本的程式皆可運作)<br>
+      https://github.com/shadowjohn/NSR-150_CDI/blob/main/CODE/NSR-150_CDI/NSR-150_CDI.ino <br>
+      https://github.com/shadowjohn/NSR-150_CDI/blob/main/CODE/NSR-150_CDI_V0.4/NSR-150_CDI_V0.4.ino
+    </td>
+  </tr>
+  <tr>
+    <td>0.4</td>
+    <td>
+      1.使用 SCR BT151-500R<br>
+      2.讓二期的 RC電腦，變成一期 RC電腦的騎乘體驗
+    </td>
+    <td>            
+      需搭配 V0.4 版程式<br>
+      https://github.com/shadowjohn/NSR-150_CDI/blob/main/CODE/NSR-150_CDI_V0.4/NSR-150_CDI_V0.4.ino
+    </td>
+  </tr>
+  </tbody>
+</table>
 <br>
 <br>
 <h2>程式版本說明：</h2>
