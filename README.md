@@ -30,23 +30,19 @@ V0.4
 </ul>
 <br>
 <img src="screenshot/NSR_CDI_V0.3.png">
-<br>
-(V0.3 版接線圖)
+<center>(V0.3 版接線圖)</center>
 <br>
 <br>
 <img src="screenshot/NSR_CDI_hand_V03.png">
-<br>
-(V0.3 版成品圖)
+<center>(V0.3 版成品圖)</center>
 <br>
 <br>
 <img src="screenshot/NSR_CDI_V0.4.png">
-<br>
-(V0.4 版接線圖)
+<center>(V0.4 版接線圖)</center>
 <br>
 <br>
 <img src="screenshot/NSR_CDI_hand_V04.png">
-<br>
-(V0.3 版成品圖)
+<center>(V0.3 版成品圖)</center>
 <br>
 <br>
 <h2>各位本說明：</h2>
