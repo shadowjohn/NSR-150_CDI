@@ -21,12 +21,10 @@ V0.4
 <h2>最後更新時間：</h2>
 2021-09-26
 <br>
-<h2>接腳：</h2>
+<h2>接腳(V0.1~V0.3版)：</h2>
 <ul>
   <li>D1：脈衝 PWM 輸入</li>
   <li>D6：點火 輸出</li>
-  <li>D7：TM1637 CLK</li>
-  <li>D8：TM1637 DIO</li>
 </ul>
 <br>
 <img src="screenshot/NSR_CDI_V0.3.png">
@@ -36,6 +34,13 @@ V0.4
 <img src="screenshot/NSR_CDI_hand_V03.png">
 <p align="center">(V0.3 版成品圖)</p>
 <br>
+<br>
+<h2>接腳(V0.4版)：</h2>
+<ul>
+  <li>D1：脈衝 PWM 輸入</li>
+  <li>D4：RC 訊號輸出</li>  
+  <li>D6：點火 輸出</li>  
+</ul>
 <br>
 <img src="screenshot/NSR_CDI_V0.4.png">
 <p align="center">(V0.4 版接線圖)</p>
